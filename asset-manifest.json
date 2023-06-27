@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/streamer-spotlight-project/static/css/main.073c9b0a.css",
-    "main.js": "/streamer-spotlight-project/static/js/main.251ae05b.js",
-    "static/js/787.ee299c37.chunk.js": "/streamer-spotlight-project/static/js/787.ee299c37.chunk.js",
-    "static/media/logo.svg": "/streamer-spotlight-project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/streamer-spotlight-project/static/css/main.620de699.css",
+    "main.js": "/streamer-spotlight-project/static/js/main.989aa80a.js",
     "index.html": "/streamer-spotlight-project/index.html",
-    "main.073c9b0a.css.map": "/streamer-spotlight-project/static/css/main.073c9b0a.css.map",
-    "main.251ae05b.js.map": "/streamer-spotlight-project/static/js/main.251ae05b.js.map",
-    "787.ee299c37.chunk.js.map": "/streamer-spotlight-project/static/js/787.ee299c37.chunk.js.map"
+    "main.620de699.css.map": "/streamer-spotlight-project/static/css/main.620de699.css.map",
+    "main.989aa80a.js.map": "/streamer-spotlight-project/static/js/main.989aa80a.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.251ae05b.js"
+    "static/css/main.620de699.css",
+    "static/js/main.989aa80a.js"
   ]
 }
