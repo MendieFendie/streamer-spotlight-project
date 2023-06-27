@@ -1,0 +1,76 @@
+.form {
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+}
+
+input[type="text"] {
+  background-color: #eaeaea;
+  width: 150px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.platformList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.platformItem {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #eaeaea;
+  padding: 5px;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: #f00;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.descriptionInput {
+  flex: 1;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.addPlatform {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.platformOption {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #eaeaea;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.addButton {
+  background: none;
+  border: none;
+  color: rgb(9, 189, 9);
+  font-size: 16px;
+  cursor: pointer;
+}
