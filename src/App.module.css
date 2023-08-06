@@ -1,0 +1,39 @@
+body {
+  background: slategray;
+}
+
+.container {
+  padding: 10px 15px;
+}
+
+.app {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 75px;
+  border: 1px red solid;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  width: auto;
+  height: auto;
+  border: 1px rgb(0, 240, 108) solid;
+}
+
+.footer {
+  display: flex;
+  width: auto;
+  height: 75px;
+  border: 1px blue solid;
+}
