@@ -1,3 +1,4 @@
 .streamersList {
   display: flex;
+  flex-direction: column;
 }

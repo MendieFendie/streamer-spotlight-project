@@ -4,11 +4,18 @@ function StreamerCard(props) {
   const { id, name, platform, description, upvotes, downvotes } = props;
   return (
     <li id={id} className={css.card}>
-      <h3>{name}</h3>
-      <p>{platform}</p>
-      <p>{description}</p>
-      <p>{upvotes}</p>
-      <p>{downvotes}</p>
+      <div>
+        <div className={css.picture}></div>
+        <h3 className={css.name}>{name}</h3>
+      </div>
+      <div>
+        <p className={css.platform}>{platform}</p>
+        <p className={css.description}>{description}</p>
+      </div>
+      <div>
+        <p className={css.upvotes}>{upvotes}</p>
+        <p className={css.downvotes}>{downvotes}</p>
+      </div>
     </li>
   );
 }

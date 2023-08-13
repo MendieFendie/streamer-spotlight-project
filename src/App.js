@@ -12,7 +12,7 @@ function App() {
             <AddBtn />
           </header>
           <main className={css.main}>
-            <h1>Recently Streamers</h1>
+            <h1 className={css.tittle}>Recently Streamers</h1>
             <StreamersList />
           </main>
           <footer className={css.footer}></footer>
