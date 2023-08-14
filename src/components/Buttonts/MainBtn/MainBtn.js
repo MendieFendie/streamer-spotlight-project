@@ -1,5 +1,9 @@
 function MainBtn() {
-  return <button>Main</button>;
+  return (
+    <>
+      <a href="/"> Home</a>
+    </>
+  );
 }
 
 export default MainBtn;

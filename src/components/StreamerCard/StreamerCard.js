@@ -13,10 +13,10 @@ function StreamerCard(props) {
         <p className={css.description}>{description}</p>
       </div>
       <div className={css.upvotes_group}>
-        <button>
+        <button className={css.upvotes_btn}>
           <p className={css.upvotes}>{upvotes}</p>
         </button>
-        <button>
+        <button className={css.downvotes_btn}>
           <p className={css.downvotes}>{downvotes}</p>
         </button>
       </div>

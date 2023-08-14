@@ -1,5 +1,5 @@
 function AddBtn() {
-  return <button>Add Streamer</button>;
+  return <div>Add Streamer</div>;
 }
 
 export default AddBtn;
