@@ -1,5 +1,11 @@
+import css from "./AddBtn.module.css";
+
 function AddBtn() {
-  return <div>Add Streamer</div>;
+  return (
+    <a className={css.add_btn} href="/">
+      Add Streamer
+    </a>
+  );
 }
 
 export default AddBtn;

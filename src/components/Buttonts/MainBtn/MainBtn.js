@@ -1,7 +1,11 @@
+import css from "./MainBtn.module.css";
+
 function MainBtn() {
   return (
     <>
-      <a href="/"> Home</a>
+      <a className={css.main_btn} href="/">
+        Home
+      </a>
     </>
   );
 }
