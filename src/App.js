@@ -1,15 +1,22 @@
+import { useState } from "react";
 import css from "./App.module.css";
 import AddBtn from "./components/Buttonts/AddBtn/AddBtn";
 import MainBtn from "./components/Buttonts/MainBtn/MainBtn";
+import Modal from "./components/Modal/Modal";
 import StreamersList from "./components/StreamersList/StreamersList";
 function App() {
+  const [openModal, setOpenModal] = useState(false);
+
+  const openModalHandler = () => {
+    setOpenModal(!openModal);
+  };
   return (
     <>
       <div className={css.container}>
         <div className={css.app}>
           <header className={css.header}>
             <MainBtn />
-            <AddBtn />
+            <AddBtn openModalHandler={openModalHandler} />
           </header>
           <main className={css.main}>
             <h2 className={css.tittle}>
@@ -23,6 +30,7 @@ function App() {
           </main>
           <footer className={css.footer}></footer>
         </div>
+        {openModal && <Modal openModalHandler={openModalHandler} />}
       </div>
     </>
   );

@@ -1,4 +1,6 @@
 .add_btn {
+  border: none;
+  background-color: transparent;
   font-size: 26px;
   color: #fff;
 }

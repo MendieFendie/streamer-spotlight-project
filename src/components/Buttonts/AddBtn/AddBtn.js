@@ -1,10 +1,10 @@
 import css from "./AddBtn.module.css";
 
-function AddBtn() {
+function AddBtn({ openModalHandler }) {
   return (
-    <a className={css.add_btn} href="/">
+    <button onClick={openModalHandler} className={css.add_btn} href="/">
       Add Streamer
-    </a>
+    </button>
   );
 }
 
