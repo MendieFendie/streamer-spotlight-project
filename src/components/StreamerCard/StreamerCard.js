@@ -1,7 +1,21 @@
 import css from "./StreamerCard.module.css";
+import data from "../../streamers.json";
 
 function StreamerCard(props) {
   const { id, name, platform, description, upvotes, downvotes } = props;
+  function upvote(id) {
+    console.log(data);
+    const streamer = data.streamers.find((streamer) => streamer.id === id);
+    if (streamer) {
+      const upvotes = streamer.upvotes + 1;
+
+      console.log(upvotes);
+    } else {
+      console.log("Streamer not found");
+    }
+  }
+
+  function downvote(id) {}
   return (
     <li id={id} className={css.card}>
       <div className={css.main_group}>
@@ -13,7 +27,7 @@ function StreamerCard(props) {
         <p className={css.description}>{description}</p>
       </div> */}
       <div className={css.upvotes_group}>
-        <button className={css.upvotes_btn}>
+        <button className={css.upvotes_btn} onClick={() => upvote(id)}>
           <p className={css.upvotes}>{upvotes}</p>
         </button>
         <button className={css.downvotes_btn}>

@@ -50,6 +50,11 @@
   }
 }
 
+.tittle:hover,
+.tittle:focus {
+  animation: none;
+}
+
 .main {
   width: auto;
   height: auto;

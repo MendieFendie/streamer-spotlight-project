@@ -2,8 +2,6 @@ import data from "../../streamers.json";
 import StreamerCard from "../StreamerCard/StreamerCard";
 import css from "./StreamersList.module.css";
 
-console.log(data);
-
 function StreamersList() {
   return (
     <ul className={css.streamersList}>

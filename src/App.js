@@ -1,7 +1,7 @@
 import { useState } from "react";
 import css from "./App.module.css";
-import AddBtn from "./components/Buttonts/AddBtn/AddBtn";
-import MainBtn from "./components/Buttonts/MainBtn/MainBtn";
+import AddBtn from "./components/Buttons/AddBtn/AddBtn";
+import MainBtn from "./components/Buttons/MainBtn/MainBtn";
 import Modal from "./components/Modal/Modal";
 import StreamersList from "./components/StreamersList/StreamersList";
 function App() {
