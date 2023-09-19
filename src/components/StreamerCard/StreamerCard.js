@@ -4,12 +4,15 @@ import data from "../../streamers.json";
 function StreamerCard(props) {
   const { id, name, platform, description, upvotes, downvotes } = props;
   function upvote(id) {
-    console.log(data);
-    const streamer = data.streamers.find((streamer) => streamer.id === id);
-    if (streamer) {
-      const upvotes = streamer.upvotes + 1;
+    const streamersArray = JSON.parse(data);
+    console.log(streamersArray);
+    const streamerIndex = streamersArray.findIndex(
+      (streamer) => streamer.id === id
+    );
 
-      console.log(upvotes);
+    if (streamerIndex !== -1) {
+      // const upvotes = streamersArray[streamerIndex].upvotes;
+      // console.log(upvotes);
     } else {
       console.log("Streamer not found");
     }
