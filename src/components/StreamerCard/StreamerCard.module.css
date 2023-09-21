@@ -17,6 +17,19 @@
   .main_group {
     margin-bottom: 10px;
   }
+  .upvotes_group {
+    width: 100%;
+    justify-content: center;
+  }
+  .upvotes_btn {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .card {
+    width: 70%;
+  }
 }
 
 .card:not(:last-child) {
