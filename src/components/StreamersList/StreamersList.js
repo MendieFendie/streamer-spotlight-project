@@ -1,8 +1,7 @@
-import data from "../../streamers.json";
 import StreamerCard from "../StreamerCard/StreamerCard";
 import css from "./StreamersList.module.css";
 
-function StreamersList() {
+function StreamersList({ data }) {
   return (
     <ul className={css.streamersList}>
       {data.streamers.map((streamer) => (

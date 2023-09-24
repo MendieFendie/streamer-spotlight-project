@@ -1,4 +1,5 @@
 import { useState } from "react";
+import data from "./streamers.json";
 import css from "./App.module.css";
 import AddBtn from "./components/Buttons/AddBtn/AddBtn";
 import MainBtn from "./components/Buttons/MainBtn/MainBtn";
@@ -26,7 +27,7 @@ function App() {
               application, you can discover and showcase your favorite streamers
               while interacting with other users in real-time.
             </h2>
-            <StreamersList />
+            <StreamersList data={data} />
           </main>
           <footer className={css.footer}></footer>
         </div>
