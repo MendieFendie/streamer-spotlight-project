@@ -1,6 +1,11 @@
 import css from "./Modal.module.css";
+import { useState } from "react";
 
 function Modal({ openModalHandler }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.name);
+  };
   return (
     <div className={css.backdrop}>
       <div className={css.modal}>
@@ -8,9 +13,9 @@ function Modal({ openModalHandler }) {
           {" "}
           X
         </button>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label for="name">Streamer name</label>
-          <input type="email" name="name" id="name" />
+          <input type="text" name="name" id="name" />
           <label for="platform">Platform</label>
           <select id="platform" name="platform">
             <option value="Twitch">Twitch</option>
