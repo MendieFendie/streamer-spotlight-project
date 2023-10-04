@@ -1,11 +1,37 @@
 import css from "./Modal.module.css";
 import { useState } from "react";
+import { nanoid } from "nanoid";
 
 function Modal({ openModalHandler }) {
+  const [form, setForm] = useState({
+    id: nanoid(),
+    name: "",
+    platform: "Twitch",
+    description: "",
+    upvotes: 0,
+    downvotes: 0,
+  });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.name);
+    console.table(form);
+
+    setForm({
+      id: "",
+      name: "",
+      platform: "",
+      description: "",
+      upvotes: 0,
+      downvotes: 0,
+    });
+    openModalHandler();
   };
+
   return (
     <div className={css.backdrop}>
       <div className={css.modal}>
@@ -15,9 +41,9 @@ function Modal({ openModalHandler }) {
         </button>
         <form onSubmit={handleSubmit}>
           <label for="name">Streamer name</label>
-          <input type="text" name="name" id="name" />
+          <input onChange={handleChange} type="text" name="name" id="name" />
           <label for="platform">Platform</label>
-          <select id="platform" name="platform">
+          <select onChange={handleChange} id="platform" name="platform">
             <option value="Twitch">Twitch</option>
             <option value="YouTube">YouTube</option>
             <option value="TikTok">TikTok</option>
@@ -26,8 +52,9 @@ function Modal({ openModalHandler }) {
           </select>
 
           <textarea
+            onChange={handleChange}
             name="description"
-            id=""
+            id="description"
             cols="30"
             rows="10"
             placeholder="Description"
