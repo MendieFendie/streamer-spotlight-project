@@ -2,7 +2,7 @@ import css from "./StreamerCard.module.css";
 import { useState } from "react";
 
 function StreamerCard(props) {
-  const { id, name, platform, description, upvotes, downvotes } = props;
+  const { id, name, upvotes, downvotes } = props;
   const [upvote, setUpvote] = useState(upvotes);
   const [downvote, setDownvote] = useState(downvotes);
 
