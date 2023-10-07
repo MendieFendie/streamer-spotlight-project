@@ -1,0 +1,11 @@
+.container {
+  margin: 0 auto;
+  width: 400px;
+  height: auto;
+  text-align: center;
+}
+
+h1,
+p {
+  color: azure;
+}

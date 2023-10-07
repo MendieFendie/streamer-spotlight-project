@@ -1,5 +1,6 @@
 import css from "./StreamerCard.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function StreamerCard(props) {
   const { id, name, upvotes, downvotes } = props;
@@ -15,7 +16,7 @@ function StreamerCard(props) {
   };
 
   return (
-    <li id={id} className={css.card}>
+    <Link to={`${id}`} id={id} className={css.card}>
       <div className={css.main_group}>
         <div className={css.picture}></div>
         <h3 className={css.name}>{name}</h3>
@@ -42,7 +43,7 @@ function StreamerCard(props) {
           <p className={css.downvotes}>{downvote}</p>
         </button>
       </div>
-    </li>
+    </Link>
   );
 }
 
