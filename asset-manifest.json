@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/streamer-spotlight-project/static/css/main.d18513a0.css",
+    "main.js": "/streamer-spotlight-project/static/js/main.694c1662.js",
+    "static/media/bg_image.jpg": "/streamer-spotlight-project/static/media/bg_image.67955b318b77765a3140.jpg",
+    "index.html": "/streamer-spotlight-project/index.html",
+    "main.d18513a0.css.map": "/streamer-spotlight-project/static/css/main.d18513a0.css.map",
+    "main.694c1662.js.map": "/streamer-spotlight-project/static/js/main.694c1662.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d18513a0.css",
+    "static/js/main.694c1662.js"
+  ]
+}
