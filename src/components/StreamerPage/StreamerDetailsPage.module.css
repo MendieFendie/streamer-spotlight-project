@@ -1,0 +1,74 @@
+.streamerDetails {
+}
+
+.streamerDetails p,
+h1,
+h2 {
+  color: white;
+}
+
+.mainGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photoDiv {
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.streamerNameLabel {
+  display: none;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.platformDiv {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.platformLabel {
+  display: flex;
+}
+
+.platform {
+  font-size: 18px;
+  color: #555;
+}
+
+.ranking_group {
+  display: flex;
+  padding-right: 50px;
+}
+
+.upvotes,
+.downvotes {
+  font-size: 16px;
+}
+.upvotes {
+  margin-right: 20px;
+}
+
+.descriptionDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptionLabel {
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 16px;
+}

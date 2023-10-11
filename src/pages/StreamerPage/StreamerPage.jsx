@@ -1,17 +1,19 @@
+import StreamerDetailsPage from "../../components/StreamerPage/StreamerDetailsPage";
+import data from "../../streamers.json";
 import css from "./StreamerPage.module.css";
+import { useParams } from "react-router-dom";
 
-function StreamerPage(data) {
+function StreamerPage() {
+  let id = Number(useParams().streamerId);
+  let streamers = data.streamers;
+
+  const streamer = streamers.find((elem) => {
+    return elem.id === id;
+  });
+
   return (
     <div className={css.container}>
-      <h1 className={css.h1}>StreamerPage</h1>
-      <p className={css.p}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, error
-        necessitatibus ea nemo quod delectus explicabo praesentium quo cumque
-        incidunt, nihil animi nisi adipisci, aspernatur doloribus. Tempora amet
-        dolorum nam neque veniam. Dolorum consequuntur perspiciatis nam nostrum
-        harum cum facilis earum asperiores omnis ipsam, quo repellendus
-        doloremque! Eum, asperiores perferendis?
-      </p>
+      <StreamerDetailsPage data={streamer} />
     </div>
   );
 }

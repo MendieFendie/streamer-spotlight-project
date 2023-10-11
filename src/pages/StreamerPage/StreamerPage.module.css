@@ -1,8 +1,8 @@
 .container {
   margin: 0 auto;
-  width: 400px;
   height: auto;
   text-align: center;
+  padding: 0 15px;
 }
 
 h1,
