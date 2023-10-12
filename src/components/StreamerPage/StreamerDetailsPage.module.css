@@ -34,7 +34,6 @@ h2 {
 .platformDiv {
   display: flex;
   flex-direction: column;
-  padding-left: 50px;
 }
 
 .platformLabel {
