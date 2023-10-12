@@ -1,25 +1,22 @@
 .streamerDetails {
 }
 
-.streamerDetails p,
-h1,
-h2 {
-  color: white;
-}
-
 .mainGroup {
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .photoDiv {
+  margin-bottom: 40px;
 }
 
 .photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .streamerNameLabel {
@@ -27,35 +24,47 @@ h2 {
 }
 
 .name {
-  font-size: 24px;
-  font-weight: bold;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ced7e087;
 }
 
 .platformDiv {
   display: flex;
   flex-direction: column;
+  padding: 0 87px;
 }
 
 .platformLabel {
-  display: flex;
+  font-family: Roboto Mono;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 15px;
 }
 
 .platform {
-  font-size: 18px;
-  color: #555;
-}
-
-.ranking_group {
-  display: flex;
-  padding-right: 50px;
+  font-family: Roboto Mono;
+  font-size: 24px;
+  font-weight: 700;
+  color: #c10101;
 }
 
 .upvotes,
 .downvotes {
   font-size: 16px;
+  color: #ced7e087;
 }
-.upvotes {
-  margin-right: 20px;
+.upvotes p:first-child {
+  color: green;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.downvotes p:first-child {
+  color: #c10101;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .descriptionDiv {
@@ -65,10 +74,16 @@ h2 {
 }
 
 .descriptionLabel {
-  margin-bottom: 15px;
+  font-family: Roboto Mono;
+  color: #ced7e087;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
 .description {
-  font-size: 16px;
+  font-family: Roboto Mono;
+  font-style: italic;
+  font-size: 14px;
   margin: 0;
 }

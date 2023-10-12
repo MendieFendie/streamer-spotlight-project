@@ -7,16 +7,6 @@
   flex-direction: column;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-  height: 75px;
-  padding: 0 15px;
-  /* border: 1px red solid; */
-}
-
 .tittle {
   font-family: Roboto Mono;
   color: beige;
@@ -27,6 +17,7 @@
   height: auto;
   /* border: 2px solid red; */
   margin: 0 auto;
+  margin-bottom: 25px;
   animation: flicker 1.5s infinite alternate;
   color: #fff;
 }

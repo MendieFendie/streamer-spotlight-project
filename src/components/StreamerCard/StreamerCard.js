@@ -21,10 +21,7 @@ function StreamerCard(props) {
         <div className={css.picture}></div>
         <h3 className={css.name}>{name}</h3>
       </div>
-      {/* <div className={css.description_group}>
-        <p className={css.platform}>{platform}</p>
-        <p className={css.description}>{description}</p>
-      </div> */}
+
       <div className={css.upvotes_group}>
         <button
           className={css.upvotes_btn}

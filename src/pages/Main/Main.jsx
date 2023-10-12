@@ -1,24 +1,11 @@
-import { useState } from "react";
 import data from "../../streamers.json";
 import css from "./Main.module.css";
-import AddBtn from "../../components/Buttons/AddBtn/AddBtn";
-import MainBtn from "../../components/Buttons/MainBtn/MainBtn";
-import Modal from "../../components/Modal/Modal";
 import StreamersList from "../../components/StreamersList/StreamersList";
 function Main() {
-  const [openModal, setOpenModal] = useState(false);
-
-  const openModalHandler = () => {
-    setOpenModal(!openModal);
-  };
   return (
     <>
       <div className={css.container}>
         <div className={css.main}>
-          <header className={css.header}>
-            <MainBtn />
-            <AddBtn openModalHandler={openModalHandler} />
-          </header>
           <main className={css.main}>
             <h2 className={css.tittle}>
               Are you a fan of streamers? Do you love watching content on
@@ -31,7 +18,6 @@ function Main() {
           </main>
           <footer className={css.footer}></footer>
         </div>
-        {openModal && <Modal openModalHandler={openModalHandler} />}
       </div>
     </>
   );
