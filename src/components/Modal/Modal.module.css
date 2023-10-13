@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 998;
 }
 
 .modal {
@@ -16,8 +16,9 @@
   width: 400px;
   background: #ffffff;
   border-radius: 4px;
-  padding: 25px 15px;
+  padding: 30px 10px 15px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
 }
 
 .closeBtn {
@@ -58,14 +59,14 @@
 }
 
 .modal button[type="submit"] {
-  background-color: #34c47e88;
   color: #fff;
   border: none;
   border-radius: 4px;
   padding: 10px 15px;
   cursor: pointer;
+  background-color: green;
 }
 
-.modal button[type="submit"]:hover {
-  background-color: #00ff5e;
+.modal button[type="submit"]:active {
+  background-color: #34c47e88;
 }

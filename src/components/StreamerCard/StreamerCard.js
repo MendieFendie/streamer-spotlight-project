@@ -16,12 +16,11 @@ function StreamerCard(props) {
   };
 
   return (
-    <Link to={`${id}`} id={id} className={css.card}>
-      <div className={css.main_group}>
+    <div id={id} className={css.card}>
+      <Link to={`${id}`} className={css.main_group}>
         <div className={css.picture}></div>
         <h3 className={css.name}>{name}</h3>
-      </div>
-
+      </Link>
       <div className={css.upvotes_group}>
         <button
           className={css.upvotes_btn}
@@ -40,7 +39,7 @@ function StreamerCard(props) {
           <p className={css.downvotes}>{downvote}</p>
         </button>
       </div>
-    </Link>
+    </div>
   );
 }
 

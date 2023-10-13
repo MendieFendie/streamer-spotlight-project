@@ -72,28 +72,20 @@
   font-weight: 700;
   font-size: 13px;
   color: #ced7e0;
+  transition-property: background-color, font-size, transform, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+
+.main_group:hover .name {
+  font-size: 17px;
+  color: rgba(21, 200, 81, 0.633);
+  cursor: pointer;
 }
 
 p {
   font-family: Roboto Mono;
   font-weight: 500;
-}
-
-.description_group {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.platform {
-  font-size: 14px;
-  font-weight: 700;
-  color: #ced7e0;
-}
-.description {
-  font-size: 12px;
-  color: #ced7e0;
 }
 
 .upvotes_group {
