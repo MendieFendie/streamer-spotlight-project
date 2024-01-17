@@ -1,7 +1,17 @@
-import data from "../../streamers.json";
 import css from "./Main.module.css";
 import StreamersList from "../../components/StreamersList/StreamersList";
+import GetAllStreamers from "../../functions/APi/GetRequest";
+import { useEffect, useState } from "react";
+
 function Main() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    GetAllStreamers().then((result) => {
+      setData(result);
+      console.log(result);
+    });
+  }, []);
   return (
     <>
       <div className={css.container}>

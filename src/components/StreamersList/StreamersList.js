@@ -4,9 +4,9 @@ import css from "./StreamersList.module.css";
 function StreamersList({ data }) {
   return (
     <ul className={css.streamersList}>
-      {data.streamers.map((streamer) => (
+      {data.map((streamer) => (
         <StreamerCard
-          key={streamer.id}
+          key={streamer._id}
           id={streamer.id}
           name={streamer.name}
           platform={streamer.platform}

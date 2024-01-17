@@ -1,14 +1,17 @@
 import css from "./StreamerCard.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import BtnRequest from "../../functions/APi/BtnRequest";
 
 function StreamerCard(props) {
   const { id, name, upvotes, downvotes } = props;
   const [upvote, setUpvote] = useState(upvotes);
   const [downvote, setDownvote] = useState(downvotes);
+  const userId = localStorage.getItem("StreamersPageUserId");
 
   const upvotesCounter = () => {
-    setUpvote(upvote + 1);
+    console.log((id, true, userId));
+    BtnRequest(id, true, userId);
   };
 
   const downvotesCounter = () => {
