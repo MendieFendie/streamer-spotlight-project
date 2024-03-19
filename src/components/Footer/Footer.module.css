@@ -1,0 +1,25 @@
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLinks a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}

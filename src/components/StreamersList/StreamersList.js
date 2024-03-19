@@ -7,8 +7,9 @@ function StreamersList({ data }) {
       {data.map((streamer) => (
         <StreamerCard
           key={streamer._id}
-          id={streamer.id}
+          id={streamer._id}
           name={streamer.name}
+          avatar={streamer.avatar}
           platform={streamer.platform}
           description={streamer.description}
           upvotes={streamer.upvotes}

@@ -18,8 +18,12 @@
   /* border: 2px solid red; */
   margin: 0 auto;
   margin-bottom: 25px;
-  animation: flicker 1.5s infinite alternate;
   color: #fff;
+}
+
+.tittle:hover,
+.tittle:focus {
+  animation: flicker 1.5s infinite alternate;
 }
 
 @keyframes flicker {
@@ -39,11 +43,6 @@
   55% {
     text-shadow: none;
   }
-}
-
-.tittle:hover,
-.tittle:focus {
-  animation: none;
 }
 
 .main {

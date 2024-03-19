@@ -1,19 +1,29 @@
 import StreamerDetailsPage from "../../components/StreamerPage/StreamerDetailsPage";
-import data from "../../streamers.json";
 import css from "./StreamerPage.module.css";
 import { useParams } from "react-router-dom";
+import GetById from "../../functions/APi/GetById";
+import { useEffect, useState } from "react";
 
 function StreamerPage() {
-  let id = Number(useParams().streamerId);
-  let streamers = data.streamers;
+  const { streamerId } = useParams();
+  const [streamerData, setStreamerData] = useState(null);
 
-  const streamer = streamers.find((elem) => {
-    return elem.id === id;
-  });
+  useEffect(() => {
+    const fetchStreamerData = async () => {
+      try {
+        const data = await GetById(streamerId);
+        setStreamerData(data);
+      } catch (error) {
+        console.error("Error fetching streamer data:", error);
+      }
+    };
+
+    fetchStreamerData();
+  }, [streamerId]);
 
   return (
     <div className={css.container}>
-      <StreamerDetailsPage data={streamer} />
+      {streamerData && <StreamerDetailsPage data={streamerData} />}
     </div>
   );
 }

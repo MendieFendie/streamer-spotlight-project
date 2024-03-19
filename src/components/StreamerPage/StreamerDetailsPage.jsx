@@ -4,11 +4,7 @@ function StreamerDetailsPage({ data }) {
   return (
     <div className={css.streamerDetails} id={data.id}>
       <div className={css.photoDiv}>
-        <img
-          className={css.photo}
-          src="https://static-cdn.jtvnw.net/jtv_user_pictures/asmongold-profile_image-f7ddcbd0332f5d28-300x300.png"
-          alt=""
-        />
+        <img className={css.photo} src={data.avatar} alt="avatar" />
         <h2 className={css.streamerNameLabel}>Streamer name:</h2>
         <p className={css.name}>{data.name}</p>
       </div>

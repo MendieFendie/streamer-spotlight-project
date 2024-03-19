@@ -1,6 +1,6 @@
 import css from "./Main.module.css";
 import StreamersList from "../../components/StreamersList/StreamersList";
-import GetAllStreamers from "../../functions/APi/GetRequest";
+import GetAllStreamers from "../../functions/APi/GetAllRequest";
 import { useEffect, useState } from "react";
 
 function Main() {
@@ -9,7 +9,6 @@ function Main() {
   useEffect(() => {
     GetAllStreamers().then((result) => {
       setData(result);
-      console.log(result);
     });
   }, []);
   return (

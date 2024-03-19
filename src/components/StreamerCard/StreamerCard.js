@@ -1,34 +1,37 @@
 import css from "./StreamerCard.module.css";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import BtnRequest from "../../functions/APi/BtnRequest";
+import { useState } from "react";
+import HandleBtnClick from "../../functions/HandleBtnClick";
 
 function StreamerCard(props) {
-  const { id, name, upvotes, downvotes } = props;
+  const { id, name, avatar, upvotes, downvotes } = props;
   const [upvote, setUpvote] = useState(upvotes);
-  const [downvote, setDownvote] = useState(downvotes);
-  const userId = localStorage.getItem("StreamersPageUserId");
+  const [downvote, SetDownvote] = useState(downvotes);
 
-  const upvotesCounter = () => {
-    console.log((id, true, userId));
-    BtnRequest(id, true, userId);
-  };
-
-  const downvotesCounter = () => {
-    setDownvote(downvote + 1);
-  };
+  async function handleClick(action) {
+    const streamerId = id;
+    const responce = await HandleBtnClick(streamerId, action);
+    console.log(responce);
+    if (action === true) {
+      setUpvote(responce.data.upvotes);
+      SetDownvote(responce.data.downvotes);
+    } else {
+      setUpvote(responce.data.upvotes);
+      SetDownvote(responce.data.downvotes);
+    }
+  }
 
   return (
     <div id={id} className={css.card}>
-      <Link to={`${id}`} className={css.main_group}>
-        <div className={css.picture}></div>
+      <Link to={`/streamers/${id}`} className={css.main_group}>
+        <img src={avatar} alt="avatar" className={css.picture}></img>
         <h3 className={css.name}>{name}</h3>
       </Link>
       <div className={css.upvotes_group}>
         <button
           className={css.upvotes_btn}
           onClick={() => {
-            upvotesCounter();
+            handleClick(true);
           }}
         >
           <p className={css.upvotes}>{upvote}</p>
@@ -36,7 +39,7 @@ function StreamerCard(props) {
         <button
           className={css.downvotes_btn}
           onClick={() => {
-            downvotesCounter();
+            handleClick(false);
           }}
         >
           <p className={css.downvotes}>{downvote}</p>
