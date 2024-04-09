@@ -12,63 +12,33 @@ function Modal({ openModalHandler }) {
     gender: "",
   });
 
+  const manNames = ["Zoey", "Boo", "Bubba", "Angel", "Oreo", "Mittens", "Coco"];
+  const womanNames = [
+    "Zoe",
+    "Patches",
+    "Gracie",
+    "Whiskers",
+    "Tinkerbell",
+    "Maggie",
+  ];
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     let genderValue = "";
+    let randomName = "";
+    let randomNumber = Math.floor(Math.random() * 24) + 1;
     if (value === "man") {
-      genderValue = `
-short01,
-short02,
-short03,
-short04,
-short05,
-short06,
-short07,
-short08,
-short09,
-short10,
-short11,
-short12,
-short13,
-short14,
-short15,
-short16,
-short17,
-short18,
-short19,
-short20,
-short21,
-short22,
-short23,
-short24`;
+      genderValue = `short${randomNumber.toString().padStart(2, "0")}`;
+      randomName = manNames[Math.floor(Math.random() * manNames.length)];
     } else if (value === "woman") {
-      genderValue = `long01,
-long02,
-long03,
-long04,
-long05,
-long06,
-long07,
-long08,
-long09,
-long10,
-long11,
-long12,
-long13,
-long14,
-long15,
-long16,
-long17,
-long18,
-long19,
-long20,
-long21`;
+      genderValue = `long${randomNumber.toString().padStart(2, "0")}`;
+      randomName = womanNames[Math.floor(Math.random() * womanNames.length)];
     }
 
     setForm((prevForm) => ({
       ...prevForm,
       [name]: value,
-      avatar: `https://api.dicebear.com/8.x/pixel-art/svg?seed=${value}&hair=${genderValue}`,
+      avatar: `https://api.dicebear.com/8.x/pixel-art/svg?seed=${randomName}&hair=${genderValue}`,
     }));
     console.log(form.avatar);
   };
