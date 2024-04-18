@@ -1,8 +1,9 @@
 import axios from "axios";
+const URL = process.env.URL;
 
 async function BtnRequest(id, action, userId) {
   try {
-    const response = await axios.patch("http://localhost:3001", {
+    const response = await axios.patch(URL, {
       id,
       action,
       userId,
