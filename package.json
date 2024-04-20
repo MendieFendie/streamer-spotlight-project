@@ -1,7 +1,7 @@
 {
   "name": "streamer-spotlight-project",
   "version": "0.1.0",
-  "homepage": "https://mendiefendie.github.io/streamer-spotlight-project/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@csstools/normalize.css": "^12.0.0",
