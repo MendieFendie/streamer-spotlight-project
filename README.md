@@ -37,10 +37,10 @@ git clone https://github.com/mendiefendie/streamer-spotlight-project.git
 
 ## API Endpoints
 
-GET /api/streamers: Retrieves a list of all streamers.
-GET /api/streamers/:streamerId: Retrieves details of a specific streamer.
-POST /api/streamers: Adds a new streamer.
-PATCH /api/streamers/:streamerId/vote: Casts a vote for a streamer.
+- GET /api/streamers: Retrieves a list of all streamers.
+- GET /api/streamers/:streamerId: Retrieves details of a specific streamer.
+- POST /api/streamers: Adds a new streamer.
+- PATCH /api/streamers/:streamerId/vote: Casts a vote for a streamer.
 
 ## Technologies Used
 
