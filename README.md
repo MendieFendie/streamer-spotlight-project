@@ -23,15 +23,15 @@ git clone https://github.com/mendiefendie/streamer-spotlight-project.git
 
 2.  Navigate to the project folder:
 
---- cd streamer-spotlight-project
+``` cd streamer-spotlight-project```
 
 3.  Install dependencies:
 
---- npm install
+```npm install```
 
 4.  Start the application:
 
---- npm start
+```npm start```
 
 5.  Open your browser and go to http://localhost:3000
 
