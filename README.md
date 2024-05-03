@@ -44,11 +44,11 @@ git clone https://github.com/mendiefendie/streamer-spotlight-project.git
 
 ## Technologies Used
 
-React: for building the user interface.
-React Router: for navigation between pages.
-Axios: for interacting with the backend through HTTP requests.
-Node.js and Express: for creating the server-side of the application.
-MongoDB: for storing data about streamers.
+- React: for building the user interface.
+- React Router: for navigation between pages.
+- Axios: for interacting with the backend through HTTP requests.
+- Node.js and Express: for creating the server-side of the application.
+- MongoDB: for storing data about streamers.
 and other technologies.
 
 ## License
