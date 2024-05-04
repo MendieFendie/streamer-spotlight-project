@@ -40,7 +40,6 @@ function Modal({ openModalHandler }) {
       [name]: value,
       avatar: `https://api.dicebear.com/8.x/pixel-art/svg?seed=${randomName}&hair=${genderValue}`,
     }));
-    console.log(form.avatar);
   };
 
   async function handleSubmit(e) {
