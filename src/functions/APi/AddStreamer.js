@@ -1,4 +1,6 @@
 import axios from "axios";
+axios.defaults.baseURL =
+  "https://streamer-spotlight-project-back-end.onrender.com";
 
 async function AddStreamer({ name, platform, description, avatar }) {
   try {
