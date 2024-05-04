@@ -3,7 +3,12 @@ import css from "./StreamersList.module.css";
 
 function StreamersList({ data }) {
   if (!data || data.length === 0) {
-    return <p>No streamers available</p>;
+    return (
+      <p>
+        The server is currently sleeping. Please wait a moment for it to wake up
+        and respond to your request.
+      </p>
+    );
   }
 
   return (
