@@ -1,9 +1,8 @@
 import axios from "axios";
-const URL = process.env.URL;
 
 async function AddStreamer({ name, platform, description, avatar }) {
   try {
-    const responce = await axios.post(URL, {
+    const responce = await axios.post({
       name,
       avatar,
       platform,

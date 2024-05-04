@@ -1,13 +1,19 @@
 import StreamerCard from "../StreamerCard/StreamerCard";
+import { RotatingLines } from "react-loader-spinner";
 import css from "./StreamersList.module.css";
 
 function StreamersList({ data }) {
   if (!data || data.length === 0) {
     return (
-      <p>
-        The server is currently sleeping. Please wait a moment for it to wake up
-        and respond to your request.
-      </p>
+      <RotatingLines
+        height="80"
+        width="80"
+        radius="9"
+        color="green"
+        ariaLabel="three-dots-loading"
+        wrapperStyle
+        wrapperClass
+      />
     );
   }
 
