@@ -1,7 +1,6 @@
 {
   "name": "streamer-spotlight-project",
   "version": "0.1.0",
-  "homepage": "https://streamer-spotlight-project.onrender.com/streamer-spotlight-project/",
   "private": true,
   "dependencies": {
     "@csstools/normalize.css": "^12.0.0",
