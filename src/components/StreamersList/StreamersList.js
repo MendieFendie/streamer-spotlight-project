@@ -2,6 +2,10 @@ import StreamerCard from "../StreamerCard/StreamerCard";
 import css from "./StreamersList.module.css";
 
 function StreamersList({ data }) {
+  if (!data || data.length === 0) {
+    return <p>No streamers available</p>;
+  }
+
   return (
     <ul className={css.streamersList}>
       {data.map((streamer) => (
