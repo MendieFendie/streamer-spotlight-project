@@ -24,21 +24,30 @@ function Modal({ openModalHandler }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    let genderValue = "";
+    let genderValue = form.gender === "man" ? "short" : "long";
     let randomName = "";
     let randomNumber = Math.floor(Math.random() * 24) + 1;
-    if (value === "man") {
-      genderValue = `short${randomNumber.toString().padStart(2, "0")}`;
+
+    if (form.gender === "man") {
       randomName = manNames[Math.floor(Math.random() * manNames.length)];
-    } else if (value === "woman") {
-      genderValue = `long${randomNumber.toString().padStart(2, "0")}`;
+    } else if (form.gender === "woman") {
       randomName = womanNames[Math.floor(Math.random() * womanNames.length)];
+    }
+
+    if (name === "gender") {
+      genderValue = value === "man" ? "short" : "long";
+      randomName =
+        value === "man"
+          ? manNames[Math.floor(Math.random() * manNames.length)]
+          : womanNames[Math.floor(Math.random() * womanNames.length)];
     }
 
     setForm((prevForm) => ({
       ...prevForm,
       [name]: value,
-      avatar: `https://api.dicebear.com/8.x/pixel-art/svg?seed=${randomName}&hair=${genderValue}`,
+      avatar: `https://api.dicebear.com/8.x/pixel-art/svg?seed=${randomName}&hair=${genderValue}${randomNumber
+        .toString()
+        .padStart(2, "0")}`,
     }));
   };
 
