@@ -1,5 +1,5 @@
 import axios from "axios";
-const URL = process.env.URL;
+const URL = "https://streamer-spotlight-project-back-end.onrender.com";
 
 async function GetAllStreamers() {
   try {
