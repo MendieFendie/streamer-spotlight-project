@@ -54,7 +54,6 @@ function Modal({ openModalHandler }) {
   async function handleSubmit(e) {
     e.preventDefault();
     await AddStreamer(form);
-    await GetAllStreamers();
     setForm({
       name: "",
       platform: "",
